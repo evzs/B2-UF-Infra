@@ -5,21 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5bf732a-e94e-4b5a-9fce-54a835863b06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/gestion-projet.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/mc_doc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/mc_honeypot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/mc_orga.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/mc_os.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/honeypot.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/backup_archive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/dns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/hosts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/remove_crontab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/restore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/website.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/pfSense.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/site-web-acces.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/exploitation/site-web-gestion.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/gp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/infra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/lansdmz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/pfsense.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/introduction.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exploitation/_category_.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/img/docsVersionDropdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/img/localeDropdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/manage-docs-versions.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/translate-your-site.md" beforeDir="false" />
     </list>
     <list id="a5556054-24a9-44a5-a61a-906586eb17de" name="Changes by poppy" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/architecture/configuration-hotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/architecture/configuration-hotes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gestion-projet.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gestion-projet.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +37,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2iCiMjhywinAz0NY6u8YiLoIpo3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -59,6 +67,7 @@
       <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs\exploitation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs\exploitation\img" />
       <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs\img" />
       <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs" />
       <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs\gestion-projet" />
@@ -72,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719000915437</updated>
-      <workItem from="1719000917854" duration="6912000" />
+      <workItem from="1719000917854" duration="10881000" />
     </task>
     <servers />
   </component>
@@ -89,5 +98,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
