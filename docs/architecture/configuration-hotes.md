@@ -479,7 +479,60 @@ Il faut modifier le fichier de configuration de `crontab` (planificateur de tâc
 
 Ici, la sauvegarde et la suppression s'exécuteront respectivement à 1h00 et 1h05.
 
-## 4.5. Serveur honeypot (HONEYPOT)
+## 4.4 Serveur honeypot (HONEYPOT)
+
+### 4.4.1. Configuration initiale 
+
+
+| Hostname                     | very-important-and-private-and-secret-server                    |
+|------------------------------|-----------------------------------------------------------------|
+| **Domaine**                  | infra.uf                                                        |
+| **Nom de l'utilisateur**     | user                                                            |
+| **Adresse IP**               | 10.10.11.242                                                    |
+| **Masque de sous-réseau**    | 255.255.255.240 (/28)                                           |
+| **Passerelle par défaut**    | 10.10.11.254                                                    |
+| **DNS**                      | 10.10.11.254                                                    |
+| **Ports ouverts (honeypot)** | 80, 8080, 20, 21, 22, 23, 25, 443, 8443, 53                     |
+| **Ports ouverts (réels)**    | 64295 (ssh), 64297 (https, monitoring), 64294 (https, admin-ui) |
+
+
+T-Pot est une plateforme honeypot open-source tout-en-un qui intègre plusieurs honeypots et outils de sécurité pour la détection et l'analyse des menaces cyber. T-Pot vise à simplifier le processus de déploiement et de gestion des honeypots pour les organisations. Il sert de solution complète de honeypot qui peut être adaptée pour répondre à des besoins de sécurité spécifiques.
+
+Pour mettre en place le honeypot, il sera nécessaire de l'installer sur un serveur. Par défaut, un serveur Ubuntu a été sélectionné pour cette installation.
+
+### 4.4.2 Installation de T-Pot sur le serveur
+1. Clonez le dépôt Github : `$ git clone https://github.com/telekom-security/tpotce`
+2. Accédez au dossier tpotce/ : `$ cd tpotce`
+3. Lancez le script d'installation : `$ ./install.sh`
+4. Suivez les instructions de l'installateur et entrez votre mot de passe si nécessaire. Le type d'installation souhaité vous sera demandé, il faudra indiquer `h` pour HIVE. Il faudra aussi renseigner un nom d'utilisateur et un nouveau mot de passe pour l'interface Web.
+5. Vérifiez attentivement les messages de l'installateur pour détecter d'éventuelles erreurs ou conflits de ports.
+6. Redémarrez votre machine : `$ sudo reboot`
+
+Une fois la machine redémarrée, vérifiez l'état des images Docker avec `docker ps` et du service tpotce avec `sudo systemctl status tpotce`.
+
+### 4.4.3 Configuration du pare-feu dans T-Pot (UFW)
+
+Autorisez l'ouverture des ports qui vont être exposés :
+
+```bash
+sudo ufw allow from any to <ip-tpot> port 80 proto tcp
+sudo ufw allow from any to <ip-tpot> port 8080 proto tcp
+sudo ufw allow from any to <ip-tpot> port 20 proto tcp
+sudo ufw allow from any to <ip-tpot> port 21 proto tcp
+sudo ufw allow from any to <ip-tpot> port 22 proto tcp
+sudo ufw allow from any to <ip-tpot> port 23 proto tcp
+sudo ufw allow from any to <ip-tpot> port 25 proto tcp
+sudo ufw allow from any to <ip-tpot> port 443 proto tcp
+sudo ufw allow from any to <ip-tpot> port 8443 proto tcp
+sudo ufw allow from any to <ip-tpot> port 53 proto udp
+```
+
+Ensuite, activez la journalisation du pare-feu avec `sudo ufw logging on`
+
+### 4.4.4. Règles de pare-feu et port-forwarding (pfSense)
+
+TODO
+
 ## 4.6. PC clients
 
 Les PC client (Windows ou Linux) n'ont pas de configuration particulière spécifiée dans le cahier des charges. Elles n'ont pas d'impératif de nomenclature pour les noms des machines et utilisateurs, ni de logiciels hors ceux spécifiés plus tôt.

@@ -5,24 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5bf732a-e94e-4b5a-9fce-54a835863b06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/architecture/Introduction.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/architecture/composants-applicatifs.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/architecture/infrastructure-generale.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2019-05-28-first-blog-post.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2019-05-29-long-blog-post.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2021-08-01-mdx-blog-post.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/2021-08-26-welcome/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/authors.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/introduction.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/architecture/_category_.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/congratulations.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/create-a-blog-post.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/create-a-document.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/create-a-page.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/deploy-your-site.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/architecture/configuration-hotes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/markdown-features.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gestion-projet.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/mc_doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/mc_honeypot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/mc_orga.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/mc_os.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/introduction.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exploitation/_category_.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/img/docsVersionDropdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/img/localeDropdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/manage-docs-versions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/translate-your-site.md" beforeDir="false" />
+    </list>
+    <list id="a5556054-24a9-44a5-a61a-906586eb17de" name="Changes by poppy" comment="">
+      <change beforePath="$PROJECT_DIR$/docs/architecture/configuration-hotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/architecture/configuration-hotes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +42,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "mzri",
+    "last_opened_file_path": "D:/System/Documents/Ynov/B2/B2-UF-Infra/docs/exploitation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +54,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs\exploitation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs\img" />
+      <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs" />
+      <recent name="D:\System\Documents\Ynov\B2\B2-UF-Infra\docs\gestion-projet" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719000915437</updated>
-      <workItem from="1719000917854" duration="3385000" />
+      <workItem from="1719000917854" duration="6912000" />
     </task>
     <servers />
   </component>
