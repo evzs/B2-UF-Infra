@@ -186,7 +186,7 @@ Dans l'onglet `Firewall > Aliases` :
 
 #### 4.1.3.5. `HONEYPOT`
 ![](./img/firewall-honeypot.png)
-### 4.1.4. DHCP
+### 4.1.5. DHCP
 
 Le DHCP doit être activé **uniquement par `PF_Master`** et dans `Services > DHCP Server`, sur l'interface choisie.
 
@@ -194,7 +194,7 @@ Dans l'architecture présentée, seul le réseau `LAN-OFFICE` dispose d'une pool
 
 S'il devait être mis en place sur d'autres interfaces, il est conseillé de suivre les mêmes étapes de configuration que pour `4.1.4.1`, à l'exception évidemment des adresses IP concernées.
 
-#### 4.1.4.1. `LAN-OFFICE`
+#### 4.1.5.1. `LAN-OFFICE`
 
 Dans `Services > DHCP Server` :
 - Cocher `Enable DHCP server on LANOFFICE interface`
@@ -210,7 +210,7 @@ De la même façon, il est conseillé d'exclure des pools DHCP les adresses rée
 L'état et les bails du serveur DHCP peuvent être vérifiés dans `Status > DHCP Leases` :
 ![](./img/dhcp_lanoffice.png)
 
-### 4.1.5. DNS
+### 4.1.6. DNS
 
 Le serveur DNS s'active **uniquement sur `PF_MASTER`**, dans `Services > DNS Resolver > General Settings` :
 - Cocher `Enable DNS Server` ;
@@ -223,7 +223,7 @@ On peut enregistrer de nouvelles IP au DNS dans la partie `Host Overrides` en ba
 
 Dans le cadre de la mise en place du serveur web, dont le FDQN et l'adresse IP sont connus en avance, on peut déjà y ajouter l'entrée :
 ![](./img/dns_website.png)
-### 4.1.5. Port Forwarding
+### 4.1.7. Port Forwarding
 
 Les règles de Port Forwarding s'activent **uniquement sur `PF_MASTER`**, dans `Firewall > NAT > Port Forward`.
 
@@ -232,7 +232,7 @@ Puisque l'IP et le port du site web, devant être accessibles depuis l'extérieu
 
 A noter toutefois que le WAN n'aura pas accès à l'entrée DNS correspondant au serveur web et devra passer directement par la `CARP VIP` des routeurs pfSense dans le `WAN`, sauf si les machines voulant accéder au site entrent la `CARP VIP` des routeurs pfSense dans leurs `DNS`.
 
-### 4.1.6. RIPv2
+### 4.1.8. RIPv2
 
 Puisque l'utilisation du protocole dynamique de routage `RIPv2` passe par l'utilisation d'un package, son installation et sa configuration ne sont pas incluses dans les paramètres automatiquement synchronisés entre les deux pfSense.
 
@@ -256,10 +256,9 @@ Dans `Services > FRR > RIP > RIP`
 
 Le fonctionnement du protocole de routage peut être vérifié dans `Services > FRR > Status > RIP` :
 ![](./img/check_rip.png)
-### 4.1.7. Portail captif
+### 4.1.9. Portail captif
 
-TODO
-### 4.1.8. Sauvegarde automatique de la configuration
+### 4.1.10. Sauvegarde automatique de la configuration
 
 L'administrateur peut choisir de réaliser les sauvegardes automatiques seulement sur `PF_MASTER`, ou sur `PF_MASTER` et `PF_BACKUP`. Dans les deux cas, la procédure est la même et doit être réalisée sur chaque machine, dans `Services > Auto Configuration Backup > Settings` :
 - Cocher `Enable automatic configuration backup` ;
@@ -270,9 +269,23 @@ L'administrateur peut choisir de réaliser les sauvegardes automatiques seulemen
 
 Les backups peuvent être récupérées dans `Services > Auto Configuration Backup > Restore`.
 
-### 4.1.9. Proxy Inverse
+### 4.1.11. Proxy Inverse
 
-TODO
+Puisque l'utilisation du proxy inverse passe par l'utilisation d'un package, son installation et sa configuration ne sont pas incluses dans les paramètres automatiquement synchronisés entre les deux pfSense.
+
+De cette façon, **toutes les manipulations suivantes sont à réaliser sur `PF_MASTER` et sur `PF_BACKUP`.**
+
+#### 4.1.6.1. Installation du package `squid`
+
+Dans `System > Package Manager`, rechercher et installer le package `squid` :  
+![](./img/squid.png)
+
+#### 4.1.6.2. Configuration du proxy inverse 
+
+Puisque nous n'aurons pas énormément d'intérêt à installer un reverse proxy, cette étape documentée plus tard, accompagnée d'une solution permettant le load-balancing.
+
+Cependant, il est possible de configurer le proxy inverse en [suivant les étapes suivants](https://www.it-connect.fr/reverse-proxy-https-avec-pfsense/)
+
 ## 4.2. Serveur web (DMZ)
 
 ### 4.2.1. Configuration initiale
@@ -303,9 +316,9 @@ Pour vérifier le bon fonctionnement du serveur il est possible d'installer le p
 elinks http://localhost
 ```
 
-Il suffit de modifier le contenu du dossier `var/www/html` afin de modifier le site web qui s'affichera sur la page. Si les règles de pare-feu (`TODO`) et de port forward (`TODO`) ont été réalisées pour `web-server`, le site est désormais accessible sur tous les réseaux à l'adresse `10.10.10.242:80`.
+Il suffit de modifier le contenu du dossier `var/www/html` afin de modifier le site web qui s'affichera sur la page. Si les règles de pare-feu et de port forward ont été réalisées pour `web-server`, le site est désormais accessible sur tous les réseaux à l'adresse `10.10.10.242:80`.
 
-Si l'entrée correspondant à `web-server` a été ajoutée au DNS (`TODO`), tous les réseaux internes pourront accéder au site web à l'adresse `documentation.infra.lan:80`.
+Si l'entrée correspondant à `web-server` a été ajoutée au DNS, tous les réseaux internes pourront accéder au site web à l'adresse `documentation.infra.lan:80`.
 
 ### 4.2.3. Mise en place des fichiers de restauration
 
@@ -372,7 +385,7 @@ Installer, si manquants après assainissement, les composants applicatifs vus da
 
 **Note** : Il convient de se connecter une première fois en SSH au serveur web avant d'exécuter l'un des scripts.
 
-### 4.2.3. Mise en place des fichiers de sauvegarde et de restauration
+### 4.3.2. Mise en place des fichiers de sauvegarde et de restauration
 
 Les dossiers suivants et leurs permissions doivent être mis en place en `sudo` sur la machine :
 ```txt
@@ -389,13 +402,13 @@ Les dossiers suivants et leurs permissions doivent être mis en place en `sudo` 
 		temp/			        (755)
 ```  
 
-#### 4.2.3.1. Fichiers `/credentials/`
+#### 4.3.2.1. Fichiers `/credentials/`
 
 Dans le dossier `/home/backup-server/credentials/` :
 - `ws-ip.txt` : contient l'IP du serveur web (ici `10.10.10.242`)
 - `ws-pass.txt` : contient le mot de passe `root` du serveur web
 
-#### 4.2.3.2. Fichiers `/scripts/`
+#### 4.3.2.2. Fichiers `/scripts/`
 
 Le fichier `/home/web-server/scripts/backup.sh` doit contenir ce qui suit :
 ```bash
@@ -468,7 +481,7 @@ done
 printf '\n'
 ```
 
-### 4.2.3. Mise en oeuvre des tâches automatiques
+### 4.3.3. Mise en oeuvre des tâches automatiques
 
 Il faut modifier le fichier de configuration de `crontab` (planificateur de tâches intégré à l'OS) pour exécuter la sauvegarde et la suppression des anciennes backups, avec `crontab -e` :
 
@@ -531,9 +544,7 @@ Ensuite, activez la journalisation du pare-feu avec `sudo ufw logging on`
 
 ### 4.4.4. Règles de pare-feu et port-forwarding (pfSense)
 
-TODO
-
-## 4.6. PC clients
+## 4.5. PC clients
 
 Les PC client (Windows ou Linux) n'ont pas de configuration particulière spécifiée dans le cahier des charges. Elles n'ont pas d'impératif de nomenclature pour les noms des machines et utilisateurs, ni de logiciels hors ceux spécifiés plus tôt.
 
