@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'B2 UF Infra',
+  tagline: 'Documentation pour le projet UF Infra & SI, par Eva Chibane et Marianne Corbel',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,7 +20,7 @@ const config: Config = {
 
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -39,8 +39,6 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -53,9 +51,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'B2 UF Infra',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'B2 UF Infra Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -64,12 +62,7 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
-        },
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        }
       ],
     },
     footer: {
@@ -79,39 +72,21 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Documentation',
-              to: '/docs/introduction',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Documentation d\'architecture',
+              to: '/docs/category/documentation-darchitecture',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Documentation d\'exploitation',
+              to: '/docs/category/documentation-dexploitation',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
+              label: 'Gestion de projet',
+              to: '/docs/gestion-projet',
+            }
+          ]
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Eva Chibane & Marianne Corbel. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -93,8 +93,6 @@ Alternativement, s'il est possible d'utiliser un `/30` (ce qui n'est pas le cas 
 | **IP disponibles**        | 2                 |
 | **Adresse de broadcast**  | 172.16.0.255      |
 
-## 2.4. Services permettant la prise en charge des communications réseau
-todo
-## 2.5. Services permettant de gérer la sécurité des réseaux
-
-todo
+[//]: # (## 2.4. Services permettant la prise en charge des communications réseau)
+[//]: # ()
+[//]: # (## 2.5. Services permettant de gérer la sécurité des réseaux)
