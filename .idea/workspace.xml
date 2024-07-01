@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5bf732a-e94e-4b5a-9fce-54a835863b06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/backupnow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/backups-pfsense.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/carp_backup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/carp_master.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exploitation/img/dashboard.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/architecture/configuration-hotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/architecture/configuration-hotes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/architecture/infrastructure-generale.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/architecture/infrastructure-generale.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exploitation/honeypot.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exploitation/honeypot.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exploitation/pfSense.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exploitation/pfSense.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exploitation/site-web-gestion.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exploitation/site-web-gestion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gestion-projet.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gestion-projet.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomepageFeatures/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomepageFeatures/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +33,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "mzri",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/System/Documents/Ynov/B2/B2-UF-Infra/docs/exploitation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -97,5 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="tf" />
+    <option name="LAST_COMMIT_MESSAGE" value="tf" />
   </component>
 </project>
